@@ -20,17 +20,8 @@ Be sure to substitute your unicode variant for en_US.utf8
 
 """
 
-from curator.cli import cli
+from curator.bin import run, EXE
 
 
 if __name__ == '__main__':
-    try:
-        cli()
-    except RuntimeError as e:
-        import sys
-        print('{0}'.format(e))
-        sys.exit(1)
-    except Exception as e:
-        if 'ASCII' in str(e):
-            print('{0}'.format(e))
-            print(__doc__)
+    main(EXE.curatorcli, __doc__)

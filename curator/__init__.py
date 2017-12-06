@@ -9,3 +9,4 @@ from .snapshotlist import SnapshotList
 from .actions import *
 from .cli import *
 from .repomgrcli import *
+from .run import run, EXE
